@@ -1,0 +1,860 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.8;
+}
+
+
+main {
+  margin-bottom: 30px;
+  color: #30344D;
+  margin-top: 90px; 
+}
+/* 紹介写真 */
+main section {
+  margin-bottom: 30px;
+}
+main section h1 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  color: #30344D;
+  font-size: 4.5vw; 
+  margin: 80px 0;
+  text-align: center;
+}
+
+.image-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  height: 50vw; 
+  max-height: 720px;
+  overflow: hidden; 
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(70%);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 3s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+
+.image-wrapper .text-title {
+  position: absolute;
+  top: 30%;
+  left: 2%;
+  font-weight: bold;
+  font-size: 4vw;
+  color: #FFA500;
+  text-align: left;
+  text-shadow: 0.2vw 0.2vw 0.4vw #fff;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.image-wrapper .text-sub {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 2vw;
+  color: #C58B4B;
+  text-align: center;
+  white-space: nowrap; 
+  font-family: 'Noto Serif JP', serif;
+}
+
+
+.image-wrapper .contact-button {
+  position: absolute;
+  bottom: 0.2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  background-color: #C58B4B;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em 2em;
+  border-radius: 1em;
+  font-size: 1.5vw;
+}
+
+.image-wrapper .contact-button:hover {
+  background-color: #30344D;
+}
+
+
+/* 相談事例 */
+.experience-section {
+  background-color: #C58B4B;
+  padding: 40px 20px;
+  text-align: center;
+
+}
+
+.experience-section h2 {
+  font-size: 48px;
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  margin: 80px 0;
+}
+
+.experience-section .circles {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.experience-section .circle {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.experience-section .circle p {
+  font-size: 18px;
+  color: #111835;
+  line-height: 1.4;
+}
+
+.experience-section .bottom-text {
+  font-weight: bold;
+  font-size: 42px;
+  color: #fff;
+  max-width: 100%;
+  margin: 80px;
+}
+
+.highlight {
+  color: #111835;
+}
+
+
+/* 特徴 */
+.reason-section {
+  display: flex;
+  justify-content: center;
+}
+
+.reason-container {
+  border: 10px solid #30344D;
+  width: 90%; 
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 80px 0;
+}
+
+.reason-title {
+  font-weight: bold;
+  font-size: 48px;
+  color: #C58B4B;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 80px 0;
+}
+
+
+.reason-item {
+  margin-bottom: 20px;
+}
+
+.reason-subtitle {
+  font-weight: 500;
+  font-size: 36px;
+  font-weight: bold;
+  color: #30344D;
+  text-align: left;
+  margin-bottom: 10px;
+  font-family: 'Noto Serif JP', serif;
+  padding:  0 64px;
+}
+
+.reason-text {
+  font-size: 24px;
+  color: #30344D;
+  text-align: center;
+  padding: 80px 64px;
+}
+
+
+
+
+
+/* 料金 */
+.price-section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.price-title {
+  font-weight: bold;
+  font-size: 48px;
+  color: #30344D;
+  margin-bottom: 40px;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 80px 0;
+}
+
+.price-item {
+  display: table;
+  width: 100%;
+  margin: 80px 0;
+}
+
+.price-item.reverse {
+  direction: rtl;
+}
+
+.price-item.reverse .price-content {
+  direction: ltr;
+}
+
+.price-image {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+}
+
+.price-image.lrft {
+  padding-left: 64px;
+}
+
+.price-image.right {
+  padding-right: 64px;
+}
+
+.price-image img {
+  width: calc(100% - 40px);
+  border: 8px solid #C58B4B;
+  margin: 80px 0;
+}
+
+.price-content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.price-content h3 {
+  font-weight: bold;
+  font-size: 36px;
+  color: #111835;
+  font-family: 'Noto Serif JP', serif;
+  margin: 80px 64px;
+}
+
+.price-content .price {
+  font-weight: 800;
+  font-size: 36px;
+  color: #C58B4B;
+  text-align: right;
+  margin-right: 64px;
+}
+
+.price-content .desc {
+  font-size: 26px;
+  color: #111835;
+  text-align: center;
+  padding: 64px;
+}
+
+.underline {
+  background: linear-gradient(transparent 60%, #E9AB66 60%);
+}
+.note {
+  font-weight: 300;
+  font-size: 24px;
+  color: #111835;
+  margin: 0 64px 80px;
+}
+
+
+
+
+
+/* 導入の流れ */
+.flow-section {
+  margin-bottom: 30px;
+}
+
+.flow-container {
+  border: 8px solid #30344D;
+  padding: 50px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.flow-title {
+  color: #C58B4B;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 80px 0;
+}
+
+.flow-step {
+  text-align: left;
+  margin: 60px 0;
+}
+
+.flow-step h3 {
+  color: #C58B4B;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: 'Noto Serif JP', serif;
+  margin: 80px 64px;
+}
+
+.flow-step p {
+  color: #111835;
+  font-size: 28px;
+  text-align: center;
+  margin: 80px 64px;
+}
+
+
+
+
+
+/* お客様の声 */
+.customer-voice {
+  background-color: #EEAF6A;
+  margin-bottom: 30px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.voice-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2em 0;
+  text-align: center;
+  color: white;
+}
+
+.voice-container h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  margin: 80px 0;
+  word-break: break-word;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.voice-box {
+  width: 90%;
+  margin: 80px auto 30px auto;
+  border: 2px solid #111835;
+  background-color: #fff;
+  padding: 1em;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.voice-box p {
+  font-size: 1.5em;
+  color: #111835;
+  line-height: 1.8;
+  text-align: left;
+  word-wrap: break-word;
+  padding: 0 64px;
+}
+
+
+
+
+
+.contact-section {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111835;
+}
+
+.contact-section h1 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-top: 80px;
+}
+
+.contact-section .contact-message {
+  font-size: 24px;
+  margin: 80px 0;
+  line-height: 1.8;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #C58B4B;
+  color: #fff;
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 1em 2em;
+  border-radius: 1em;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  margin: 80px 0;
+}
+
+.contact-section .contact-button:hover {
+  background-color: #111835;
+}
+
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+
+  main {
+    margin-top: 100px; 
+  }
+
+  main section h1 {
+    font-size: 6vw;
+    margin: 48px 0;
+  }
+
+  .image-wrapper {
+    width: 95%;
+    height: auto;
+  }
+
+  .image-wrapper img {
+    height: auto;
+  }
+
+  .image-wrapper .text-title {
+    font-size: 6vw;
+    top: 30%;
+    left: auto;         
+    right: 2%; 
+    text-align: right;
+  }
+
+  .image-wrapper .text-sub {
+    font-size: 3vw;
+    top: 60%;
+  }
+  
+
+  .image-wrapper .contact-button {
+    white-space: nowrap;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+  }
+  
+
+  .experience-section h2 {
+    font-size: 26px;
+    margin: 48px 0;
+  }
+
+  .experience-section .circles {
+    gap: 25px;
+  }
+
+  .experience-section .circle {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+  }
+
+  .experience-section .circle p {
+    font-size: 13px;
+  }
+
+  .experience-section .bottom-text {
+    max-width: 100%;
+    text-wrap: nowrap;
+    font-size: 18px;
+    margin: 48px 0;
+  }
+
+  .reason-section {
+    margin-top: -48px;
+  }
+
+
+  .reason-title {
+    font-size: 26px;
+    margin: 48px 0;
+    padding: 0 16px;
+  }
+
+  .reason-container {
+    gap: 0;
+  }
+
+  
+  .reason-subtitle {
+    font-size: 15px;
+    padding: 0 16px;
+  }
+
+  .reason-text {
+    text-align: left;
+    font-size: 14px;
+    padding: 48px 16px;
+  }
+
+  .price-title {
+    font-size: 26px;
+    margin: 48px 0;
+  }
+
+  .price-item {
+    display: block;
+  }
+
+  .price-image,
+  .price-content {
+    display: block;
+    width: 100%;
+  }
+
+  .price-image img {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .price-image.right {
+    padding: 0;
+  }
+
+  .price-content h3 {
+    font-size: 24px;
+    max-width: 100%;
+    text-wrap: nowrap;
+    text-align: center;
+    margin: 48px 0; 
+  }
+
+  .price-content .price {
+    text-align: center;
+    font-size: 22px;
+    margin: 48px 0 ;
+  }
+
+  .price-content .desc {
+    font-size: 18px;
+    padding: 0 16px;
+    line-height: 1.8;
+  }
+
+  .note {
+    font-size: 14px;
+    margin: -48px 0 0;
+  }
+
+  .contact-btn a {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+
+.flow-container {
+  margin: 0;
+  gap: 0;
+  padding: 0 16px;
+}
+
+  .flow-title {
+    font-size: 26px;
+    margin: 48px 0;
+  }
+
+  .flow-step {
+    margin: 0;
+  }
+
+  .flow-step h3 {
+    font-size: 20px;
+    padding: 0 16px;
+    margin: 0;
+  }
+
+  .flow-step p {
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 16px;
+    margin: 48px 0;
+  }
+  
+  
+  .customer-voice {
+    max-width: 95%;
+  }
+
+  .voice-container h1 {
+    font-size: 26px;
+    margin: 48px 0;
+  }
+
+  .voice-box {
+    width: 95%;
+    margin: 48px auto;
+  }
+
+  .voice-box p {
+    font-size: 14px;
+    padding: 0 16px;
+  }
+
+
+  .contact-section h1 {
+    font-size: 26px;
+    margin: 48px 0;
+  }
+
+  .contact-section .contact-message {
+    font-size: 14px;
+    margin: 48px 0;
+  }
+
+.contact-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 48px 0;
+  }
+}
+
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+/* 初期状態 */
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+/* スライドイン（下から上） */
+.animate-on-scroll.slide-in {
+  transform: translateY(50px);
+}
+.animate-on-scroll.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 上から落ちる */
+.animate-on-scroll.drop-in {
+  transform: translateY(-50px);
+}
+.animate-on-scroll.drop-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.animate-on-scroll.slide-from-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.slide-from-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-on-scroll.slide-from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.slide-from-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  /* 全ボタンを統一 */
+  .image-wrapper .contact-button {
+    font-size: 20px;
+    padding: 16px 20px;
+    margin-bottom: 30px;
+  }
+
+  main section h1 {
+    font-size: 4vw;
+    margin: 64px 0;
+  }
+
+  .image-wrapper {
+    width: 85%;
+    height: 45vw;
+  }
+  .image-wrapper .text-title {
+    font-size: 3.5vw;
+    left: auto;         
+    right: 2%;          
+    text-align: right;  
+    margin-top: -100px;
+  }
+
+  .image-wrapper .text-sub {
+    font-size: 1.8vw;
+    bottom: 30%; 
+  }
+
+  .experience-section h2 {
+    font-size: 36px;
+    margin: 64px 0;
+  }
+
+
+  .experience-section .circle p {
+    font-size: 18px;
+  }
+
+  .experience-section .bottom-text {
+    font-size: 30px;
+    margin: 64px 0;
+  }
+
+  .reason-title {
+    font-size: 36px;
+    margin: 64px 0;
+    padding-left: 0 24px;
+  }
+
+  .reason-container {
+    gap: 0;
+  }
+
+
+  .reason-subtitle {
+    font-size: 28px;
+    padding: 0 24px;
+  }
+
+  .reason-text {
+    font-size: 20px;
+    padding: 64px 24px;
+  }
+
+  .price-title {
+    font-size: 36px;
+    margin: 64px 0;
+  }
+
+  .price-content h3 {
+    font-size: 28px;
+    margin: 64px 0;
+    
+    text-align: center;
+  }
+
+  .price-content .price {
+    font-size: 28px;
+    margin: 64px 0;
+    text-align: center;
+  }
+
+  .price-content .desc {
+    font-size: 22px;
+    padding: 0 16px;
+    line-height: 1.8;
+  }
+
+  .note {
+    font-size: 18px;
+    margin: 64px 0;
+  }
+
+  .flow-container {
+    margin: 0;
+    padding: 0 16px;
+  }
+
+  .flow-title {
+    font-size: 36px;
+    margin: 64px 0;
+  }
+
+  .flow-step {
+    margin: 0;
+  }
+
+  .flow-step h3 {
+    font-size: 28px;
+    padding: 0 24px;
+    margin: 0;
+  }
+
+
+  .flow-step p {
+    font-size: 20px;
+    padding: 0 24px;
+    margin: 64px 0;
+  }
+
+  .voice-container h1 {
+    font-size: 36px;
+    margin: 64px 0;
+  }
+
+  .voice-box {
+    width: 95%;
+    margin: 64x auto;
+  }
+
+  .voice-box p {
+    font-size: 20px;
+    padding: 0 24px;
+  }
+
+  .contact-section h1 {
+    font-size: 36px;
+    margin: 64px 0;
+  }
+
+  .contact-section .contact-message {
+    font-size: 20px;
+    margin: 64px 0;
+  }
+
+  .contact-btn,
+  .contact-button {
+    font-size: 30px;
+    padding: 24px 48px;
+    margin-bottom: 64px 0;
+  }
+}
