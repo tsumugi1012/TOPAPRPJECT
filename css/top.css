@@ -635,7 +635,7 @@ body {
 /* 初期状態 */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(0px);
   transition: all 1s ease-out;
 }
 
