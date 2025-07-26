@@ -514,6 +514,10 @@ main section h1 {
     margin: 48px 0;
   }
 
+  .training-feature-section .training-feature-box ul{
+    padding: 0 16px;
+  }
+  
   .training-feature-section .training-feature-box li {
     font-size: 18px;
     margin: 48px 0;
